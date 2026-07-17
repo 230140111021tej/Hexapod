@@ -3,7 +3,7 @@
 # 🕷️ HexaBot
 ### AI Assisted Smart Hexapod Robot for Rough Terrain Navigation
 
-<img src="images/robot.png" width="700">
+<img src="images/hexapod.png" width="850">
 
 [![Status](https://img.shields.io/badge/Status-Under%20Development-blue)]
 [![Platform](https://img.shields.io/badge/Platform-ESP8266-success)]
@@ -38,6 +38,14 @@ The robot combines
 
 to create a stable and intelligent walking platform.
 
+<p align="center">
+<img src="images/top_layout.png" width="850">
+</p>
+
+<p align="center">
+<b>Complete CAD layout showing the chassis, servo placement and complete leg assembly.</b>
+</p>
+
 ---
 
 # 🎯 Project Objectives
@@ -71,6 +79,22 @@ to create a stable and intelligent walking platform.
 
 ---
 
+## Robot Specifications
+
+| Parameter | Value |
+|-----------|------|
+| Weight (Without Battery) | **3.1 kg** |
+| Weight (With Battery) | **3.4 kg** |
+| Number of Legs | 6 |
+| Degrees of Freedom | 18 |
+| Servo Motors | 18 × RKI1203 |
+| Servo Torque | 35 kg·cm |
+| Controller | ESP8266 |
+| PWM Driver | PCA9685 |
+| CAD Software | Fusion 360 |
+
+---
+
 # ⚙ Hardware
 
 | Component | Specification |
@@ -84,6 +108,22 @@ to create a stable and intelligent walking platform.
 | Power Supply (Current) | 8.4V SMPS |
 | Future Power Source | 2S Li-ion Battery |
 | CAD Software | Fusion 360 |
+
+## Hardware Components
+
+<p align="center">
+
+<img src="images/ESP8266-Pinout-NodeMCU.png" width="220">
+
+<img src="images/PCA9685-Module-Pinout.png" width="320">
+
+<img src="images/RKI1203_Servo.jpg" width="220">
+
+</p>
+
+<p align="center">
+<b>ESP8266 NodeMCU, PCA9685 PWM Driver and RKI1203 35kg·cm High Torque Servo.</b>
+</p>
 
 ---
 
@@ -113,249 +153,56 @@ Total
 6 Legs × 3 DOF = 18 DOF
 ```
 
----
+## Leg Design
 
-# 🔌 Electronics Architecture
+<p align="center">
 
-```
-                 +------------------+
-                 |    ESP8266       |
-                 +--------+---------+
-                          |
-                     I2C Bus
-                          |
-                 +--------+---------+
-                 |     PCA9685      |
-                 +--------+---------+
-                          |
-               -----------------------
-              | 18 PWM Servo Outputs |
-               -----------------------
-                          |
-                 RKI1203 Servo Motors
+<img src="images/coxa.png" width="250">
 
-Power
+<img src="images/femur.png" width="250">
 
-AC Supply
-     │
-SMPS 8.4V
-     │
-Power Distribution
-     │
-Servo Driver
-     │
-Servos
-```
+<img src="images/tibia.png" width="250">
 
-Future Version
+</p>
 
-```
-2S Li-ion Battery
-
-↓
-
-Fuse
-
-↓
-
-Buck Converter
-
-↓
-
-ESP8266
-
-↓
-
-PCA9685
-
-↓
-
-Servo Motors
-```
+<p align="center">
+<b>Custom designed Coxa, Femur and Tibia links developed in Fusion 360.</b>
+</p>
 
 ---
 
-# 🧠 Software Architecture
+## Central Chassis
 
-```
-Initialization
+<p align="center">
+<img src="images/trunk_body.png" width="450">
+</p>
 
-↓
-
-Servo Calibration
-
-↓
-
-Stand Position
-
-↓
-
-Gait Generation
-
-↓
-
-Inverse Kinematics
-
-↓
-
-Servo Angle Calculation
-
-↓
-
-PWM Generation
-
-↓
-
-Walking Motion
-```
+<p align="center">
+<b>Lightweight optimized central body supporting six independent robotic legs.</b>
+</p>
 
 ---
 
-# 🚶 Planned Gaits
+## Servo Mount
 
-- Stand
-- Sit
-- Tripod Gait
-- Ripple Gait
-- Wave Gait
-- Rotate Left
-- Rotate Right
-- Crab Walk
+<p align="center">
+<img src="images/servo_mount.png" width="500">
+</p>
 
----
-
-# 📂 Repository Structure
-
-```
-HexaBot/
-
-│
-├── README.md
-├── LICENSE
-│
-├── firmware/
-│      ├── esp8266/
-│      ├── stm32/
-│      └── pca9685/
-│
-├── cad/
-│      ├── Fusion360/
-│      ├── STL/
-│      └── Drawings/
-│
-├── docs/
-│      ├── Mechanical.md
-│      ├── Electronics.md
-│      ├── Kinematics.md
-│      └── Gait.md
-│
-├── hardware/
-│      ├── Wiring
-│      └── Schematics
-│
-├── images/
-│
-├── videos/
-│
-└── report/
-```
+<p align="center">
+<b>Custom designed high-strength servo mounting bracket.</b>
+</p>
 
 ---
 
-# 🚧 Development Status
+## Shock Absorbing Foot
 
-| Module | Status |
-|---------|--------|
-| Mechanical Design | ✅ |
-| CAD | ✅ |
-| Chassis Assembly | ✅ |
-| Servo Installation | ✅ |
-| ESP8266 Firmware | 🟡 |
-| PCA9685 Integration | 🟡 |
-| Servo Calibration | 🟡 |
-| Walking Algorithm | 🟡 |
-| Wireless Control | 🔜 |
-| Battery Operation | 🔜 |
-| Obstacle Detection | 🔜 |
+<p align="center">
+<img src="images/foot.png" width="250">
+</p>
+
+<p align="center">
+<b>Spring assisted foot mechanism for better terrain adaptability.</b>
+</p>
 
 ---
-
-# 🔬 Future Improvements
-
-- IMU Stabilization
-- Ultrasonic Obstacle Detection
-- Computer Vision
-- SLAM
-- ROS2 Integration
-- Autonomous Navigation
-- Terrain Classification
-- AI Based Gait Selection
-
----
-
-# 📷 Project Gallery
-
-(Add photos here)
-
-```
-images/
-
-robot_front.jpg
-
-robot_side.jpg
-
-servo_mount.jpg
-
-cad_design.png
-
-walking.gif
-```
-
----
-
-# 🎥 Demonstration
-
-(Add YouTube video or GIF)
-
-```
-videos/demo.mp4
-```
-
----
-
-# 🏆 SCAI 2026
-
-This repository is developed as a project submission for
-
-**SCAI 2026**
-
-**Track T1**
-### Smart Sensing & Intelligent Electronic Systems
-
-The objective is to develop a working intelligent robotic platform demonstrating embedded control, smart sensing capability, and robust locomotion over uneven terrain.
-
----
-
-# 👨‍💻 Team
-
-Team Name
-
-(To be Updated)
-
-Members
-
-- Your Name
-
-Mentor
-
-- (Faculty Guide)
-
----
-
-# ⭐ Support
-
-If you found this project interesting,
-
-⭐ Star the repository.
-
-Feedback and suggestions are always welcome.
