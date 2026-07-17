@@ -398,20 +398,14 @@ Planned improvements include:
 
 ---
 
+
 # 🎥 Demonstration
 
-A demonstration video showing servo calibration, standing posture and walking gaits will be uploaded after successful gait implementation.
+The following video demonstrates the current prototype of **HexaBot**, including the standing posture, servo synchronization, and initial walking motion.
 
+▶️ **Watch the Demonstration Video**
 
-<p align="center">
-  <a href="videos/hexabot_demo.mp4">
-    <img src="images/walking_demo.gif" width="750">
-  </a>
-</p>
-
-<p align="center">
-Click the animation to watch the full demonstration video.
-</p>
+https://github.com/230140111021tej/Hexapod/releases/download/v1.0/Hexapod_video.mp4
 
 
 ---
