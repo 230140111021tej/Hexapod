@@ -402,7 +402,7 @@ Planned improvements include:
 
 A demonstration video showing servo calibration, standing posture and walking gaits will be uploaded after successful gait implementation.
 
-```
+
 <p align="center">
   <a href="videos/hexabot_demo.mp4">
     <img src="images/walking_demo.gif" width="750">
@@ -412,7 +412,7 @@ A demonstration video showing servo calibration, standing posture and walking ga
 <p align="center">
 Click the animation to watch the full demonstration video.
 </p>
-```
+
 
 ---
 
