@@ -404,9 +404,9 @@ A demonstration video showing servo calibration, standing posture and walking ga
 
 ```
 <p align="center">
-<a href="videos/hexabot_demo.mp4">
+  <a href="videos/hexabot_demo.mp4">
     <img src="images/walking_demo.gif" width="750">
-</a>
+  </a>
 </p>
 
 <p align="center">
